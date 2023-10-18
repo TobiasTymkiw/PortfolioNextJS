@@ -35,7 +35,7 @@ export default function Qualifications() {
     {
       title: "Spaceos WebPage Work Experience",
       time: `May. 2023 - Sep. 2023`, //////////////////////PRESENTT
-      where: "Proyment",
+      where: "Spaceos",
       position: "left",
       href: "https://www.spaceos.com.pe",
     },{
