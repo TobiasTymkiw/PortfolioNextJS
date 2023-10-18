@@ -1,0 +1,148 @@
+@import "../../../styles/styles.scss";
+
+.about {
+  @include section;
+}
+
+.container {
+  @include flex-column;
+  max-width: 980px;
+  padding-top: 100px;
+  align-items: center;
+  cursor: default;
+
+  h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 38px;
+    margin-bottom: 12px;
+  }
+  p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.aboutMeContainer {
+  @include flex-row;
+  padding: 64px 0px 0px;
+  width: 100%;
+  justify-content: space-between;
+  @include responsive("Tablet") {
+    flex-direction: column;
+    align-items: center;
+  }
+  .divImg {
+    width: 42%;
+    height: 555px;
+    /*     border-radius: 16px 30% 16px 16px;*/
+    border-radius: 10% 35% 35% 10%;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      transform: rotate(-10deg);
+      width: 550px;
+      height: auto;
+      position: absolute;
+      top: -140px;
+      right: -5px;
+    }
+    @include responsive("Tablet") {
+      border-radius: 35% 35% 35% 35%;
+      height: 360px;
+      width: 360px;
+      margin-bottom: 20px;
+      img {
+        top: -120px;
+        width: 400px;
+      }
+    }
+  }
+  .aboutInfo {
+    @include flex-column;
+    width: 52%;
+    position: relative;
+    @include responsive("Tablet") {
+      width: 58%;
+    }
+    @include responsive("phone-L") {
+      width: 80%;
+    }
+    @include responsive("phone-M-L") {
+      width: 100%;
+    }
+    .cardsContainer {
+      @include flex-row;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 0 0 30px 0;
+      @include responsive("Tablet") {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(auto, auto);
+        gap: 10px 10px;
+      }
+      .box {
+        @include flex-column;
+        align-items: center;
+        width: 130px;
+        min-width: 130px;
+        height: auto;
+        background: rgb(65, 24, 24);
+        border-radius: 8px;
+        padding: 20px 15px;
+        @include responsive("Tablet") {
+          width: auto;
+        }
+        h3 {
+          margin: 0 0 13px;
+          font-size: 20px;
+          font-weight: 600;
+        }
+        p {
+          font-size: 16px;
+          font-weight: 500;
+          text-align: center;
+        }
+      }
+      .box3 {
+        @include responsive("Tablet") {
+          grid-column: 1 / 3;
+          grid-row: 2;
+          padding: 20px 0px;
+        }
+      }
+    }
+  }
+  .aboutText {
+    font-size: 20px;
+    font-weight: 500;
+    @include responsive("Tablet") {
+      max-width: 95vw;
+      margin-bottom: 85px;
+    }
+  }
+  span {
+    @include responsive("Tablet") {
+      margin: auto;
+    }
+  }
+
+  button {
+    @include button;
+    /* Button position */
+    bottom: 0;
+    position: absolute;
+    @include responsive("Tablet") {
+      left: 0;
+      right: 0;
+      margin: auto auto;
+      width: 100%;
+    }
+  }
+  button:hover {
+    transform: scale(1.05);
+  }
+}

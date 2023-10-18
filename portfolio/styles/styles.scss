@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Inter:wght@400;600;700&display=swap");
+
+$generalBackground: #131111;
+$buttonBackground: rgb(65, 24, 24);
+//$generalFontColor: #f0e9d2;
+//$generalFontColor: #f1faee;
+$generalFontColor: #fffdfd;
+
+@mixin container-width-padding {
+  width: 100%;
+  padding: 100px 230px 0px;
+  @include responsive("Tablet") {
+    padding: 100px 14vw 0px;
+  }
+}
+
+@mixin section {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+@mixin button {
+  cursor: pointer;
+  min-width: 202px;
+  height: 64px;
+  width: 50%;
+  background: rgb(65, 24, 24);
+  border: none;
+  border-radius: 8px;
+  color: $generalFontColor;
+  font-size: 18px;
+  font-weight: 700;
+  /* Animation */
+  transition-duration: 0.4s;
+  /* Img-Text Display */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  img {
+    width: 20px;
+  }
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin responsive($device) {
+  /*MEDIA QUERIES*/
+
+  @if $device == phone-S {
+    @media screen and (max-width: 374px) {
+      @content;
+    }
+  }
+  @if $device == phone-M {
+    @media screen and (max-width: 435px) {
+      @content;
+    }
+  }
+  @if $device == phone-M-L {
+    @media screen and (max-width: 595px) {
+      @content;
+    }
+  }
+  @if $device == phone-L {
+    @media screen and (max-width: 767px) {
+      @content;
+    }
+  }
+  @if $device == NavBar {
+    @media screen and (max-width: 955px) {
+      @content;
+    }
+  }
+  @if $device == Tablet {
+    @media screen and (max-width: 1023px) {
+      @content;
+    }
+  }
+  @if $device == Laptop {
+    @media screen and (max-width: 1439px) {
+      @content;
+    }
+  }
+  @if $device == Desktop {
+    @media screen and (max-width: 2560px) {
+      @content;
+    }
+  }
+}

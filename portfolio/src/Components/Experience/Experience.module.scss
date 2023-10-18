@@ -1,0 +1,124 @@
+@import "../../../styles/styles.scss";
+.qualification {
+  @include section;
+}
+
+.container {
+  @include flex-column;
+  @include container-width-padding;
+  align-items: center;
+  cursor: default;
+  a{
+    color: inherit;
+  }
+  h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 38px;
+    margin-bottom: 12px;
+  }
+  p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.timeline {
+  position: relative;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 1300px;
+  .line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 97%;
+    width: 4px;
+    background: rgb(146, 58, 58);
+    z-index: 3;
+    opacity: 0.7;
+    transition: 0.3s;
+    @include responsive("phone-L") {
+      margin: 0px 0px 0px 25%;
+    }
+    @include responsive("phone-M-L") {
+      margin: 0px 0px 0px 5%;
+    }
+  }
+  .container {
+    padding: 0;
+    position: relative;
+    width: 50%;
+    transition: 0.2s;
+    @include responsive("phone-L") {
+      width: 70%;
+    }
+    @include responsive("phone-M-L") {
+      width: 100%;
+    }
+  }
+  .right {
+    position: relative;
+    right: -50%;
+    transition: 0.2s;
+    @include responsive("phone-L") {
+      left: 25%;
+    }
+    @include responsive("phone-M-L") {
+      left: 5%;
+    }
+  }
+  .left {
+    position: relative;
+    left: 0;
+    transition: 0.2s;
+    @include responsive("phone-L") {
+      left: 25%;
+    }
+    @include responsive("phone-M-L") {
+      left: 5%;
+    }
+  }
+  .point {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: $generalFontColor;
+    border-radius: 50%;
+    top: 10%;
+    z-index: 4;
+    transition: 0.2s;
+  }
+  .pright {
+    transition: 0.2s;
+    left: -10px;
+    @include responsive("phone-L") {
+      left: -8px;
+    }
+  }
+  .pleft {
+    transition: 0.2s;
+    right: -10px;
+    @include responsive("phone-L") {
+      left: -8px;
+    }
+  }
+  .textbox {
+    width: 212px;
+    padding: 0 30px 10px 30px;
+    position: relative;
+    /* background: rgb(146, 58, 58); */
+    border-radius: 6px;
+    font-size: 15px;
+    transition: 0.2s;
+    @include responsive("phone-L") {
+      padding-bottom: 40px;
+    }
+    h2 {
+      font-size: 23px;
+    }
+  }
+}
