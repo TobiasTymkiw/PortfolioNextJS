@@ -12,8 +12,8 @@ export default function App() {
       <Header></Header>
       <Home></Home>
       <AboutMe></AboutMe>
-      <Skills></Skills>
       <Qualifications></Qualifications>
+      <Skills></Skills>
       <Contact></Contact>
       <Footer></Footer>
     </>

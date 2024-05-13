@@ -13,8 +13,8 @@ export default function Header() {
   const navLinks = [
     "Home",
     "About",
-    "Skills",
     "Experience",
+    "Skills",
     /* "Projects", */
     "Contact",
   ];

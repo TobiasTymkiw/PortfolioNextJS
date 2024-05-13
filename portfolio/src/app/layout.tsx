@@ -18,14 +18,14 @@ const jsonLd = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Full Stack Web Developer | Tobias Tymkiw Portfolio",
+    default: "Tobias Tymkiw",
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   alternates: {
     canonical: siteConfig.url,
   },
-  keywords: ["portfolio", "tobias", "tymkiw"],
+  keywords: ["portfolio", "tobias", "tymkiw", "tobias tymkiw", 'curriculum','cv'],
   openGraph: {
     type: "website",
     locale: "en",

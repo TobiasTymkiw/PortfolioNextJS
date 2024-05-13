@@ -88,7 +88,7 @@ export default function Footer() {
               <Image src={cvSvg} alt="Download - Icon" />
             </button>
           </div>
-          <span>©Copyright {presentYear}. All rights reserved.</span>
+          <span> All rights reserved. {presentYear}.</span>
         </div>
       </footer>
     </>
