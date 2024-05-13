@@ -49,10 +49,12 @@ export default function Home() {
                 <p>🖐</p>
               </h1>
               <h1>
-                <span>----</span>I&apos;m Tobias Tymkiw
+                <span>---</span>I&apos;m Tobias Tymkiw
               </h1>
               <p>
-                A Full-Stack web Developer based in Chaco,Argentina. I&apos;m
+                A Linux / Hardware enthusiast and CS50 student working 
+                as Full-Stack Web Developer. <br />
+                Based in Chaco, Argentina. I&apos;m
                 very passionate and dedicated to my work.
               </p>
               {/* Contact button to that section */}

@@ -8,6 +8,11 @@ import Link from "next/dist/client/link";
 import useDownloader from "react-use-downloader";
 
 export default function Footer() {
+  const presentYear =
+  //Date().split(" ").splice(1, 3)[0] // Month
+  // + ". " +
+  Date().split(" ").splice(1, 3)[2];// Year
+
   const { download } = useDownloader();
   const fileURL = "/CV-TobiasTymkiw.pdf";
   const filename = "CV-TobiasTymkiw.pdf";
@@ -28,7 +33,6 @@ export default function Footer() {
       img: GitHubSVG,
     },
   ];
-
   const handleClickNav = (scrollToId: string) => {
     document.getElementById(scrollToId)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -47,7 +51,6 @@ export default function Footer() {
       </li>
     );
   };
-
   const renderLinkIcon = (content: (typeof linkIcons)[0]) => {
     return (
       <Link
@@ -85,7 +88,7 @@ export default function Footer() {
               <Image src={cvSvg} alt="Download - Icon" />
             </button>
           </div>
-          <span>©Copyright 2023. All rigths reserved</span>
+          <span>©Copyright {presentYear}. All rights reserved.</span>
         </div>
       </footer>
     </>

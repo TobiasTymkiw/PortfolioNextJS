@@ -6,6 +6,7 @@ import handleSubmitFireBase from "../../FireBase/Handles/HandleSubmit";
 import imgComment from "../../assets/Home/message-2-line.svg";
 import imgMail from "../../assets/Contact/mail-send-line.svg";
 import imgWhats from "../../assets/Contact/whatsapp-line.svg";
+import imgLinkedin from "../../assets/Home/linkedin-box-fill.svg";
 import imgArrow from "../../assets/Contact/arrow-right-line.svg";
 import Image from "next/image";
 
@@ -16,6 +17,7 @@ interface infoform {
 }
 
 export default function Contact() {
+  
   const cardsInfo = [
     {
       icon: imgMail,
@@ -23,12 +25,19 @@ export default function Contact() {
       info: "tobiastymkiw@gmail.com",
       direction: "mailto:tobiastymkiw@gmail.com",
     },
-    {
+    /* {
       icon: imgWhats,
       network: "WhatsApp",
       info: "+54 9 3624 692037",
       direction:
         "https://api.whatsapp.com/send?phone=+5493624692037&text=Hello,%20I%20wanna%20know%20you%20more!!",
+    }, */
+    {
+      icon: imgLinkedin,
+      network: "Linkedin",
+      info: "Tobias Tymkiw",
+      direction:
+        "https://www.linkedin.com/in/tobias-tymkiw",
     },
   ];
   const {
