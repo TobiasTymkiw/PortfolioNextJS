@@ -17,7 +17,13 @@ $generalFontColor: #fffdfd;
 @mixin section {
   display: flex;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 75vh;
+}
+@mixin homeSection {
+  display: flex;
+  justify-content: center;
+  min-height:90vh;
+ 
 }
 @mixin button {
   cursor: pointer;

@@ -34,7 +34,7 @@ export default function Qualifications() {
     },
     {
       title: "Spaceos WebPage Work Experience",
-      time: `May. 2023 - Sep. 2023`, //////////////////////PRESENTT
+      time: `May. 2023 - Sep. 2023`, //////////////////////PRESENT
       where: "Spaceos",
       position: "left",
       href: "https://www.spaceos.com.pe",
@@ -100,7 +100,6 @@ export default function Qualifications() {
     );
   };
   return (
-    <>
       <section id="experienceSection" className={styles.qualification}>
         <div className={styles.container}>
           <h2>Experiences</h2>
@@ -111,6 +110,5 @@ export default function Qualifications() {
           </div>
         </div>
       </section>
-    </>
   );
 }

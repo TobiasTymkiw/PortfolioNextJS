@@ -70,7 +70,6 @@ export default function Footer() {
   };
 
   return (
-    <>
       <footer className={styles.footer}>
         <div className={styles.container}>
           <h2>Tobias Tymkiw</h2>
@@ -91,6 +90,5 @@ export default function Footer() {
           <span> All rights reserved. {presentYear}.</span>
         </div>
       </footer>
-    </>
   );
 }

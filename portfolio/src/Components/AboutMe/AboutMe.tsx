@@ -1,5 +1,4 @@
 "use client";
-import { Fragment } from "react";
 import cvSvg from "../../assets/AboutMe/file-download-line.svg";
 import styles from "./AboutMe.module.scss";
 import Image from "next/image";
@@ -12,7 +11,6 @@ export default function AboutMe() {
   const filename = "CV-TobiasTymkiw.pdf";
 
   return (
-    <Fragment>
       <section id="aboutSection" className={styles.about}>
         <div className={styles.container}>
           <h2>About Me</h2>
@@ -56,6 +54,5 @@ export default function AboutMe() {
           </div>
         </div>
       </section>
-    </Fragment>
   );
 }

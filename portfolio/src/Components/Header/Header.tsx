@@ -50,13 +50,13 @@ export default function Header() {
       <nav className={styles.nav}>
         <label onClick={() => handleSelect(selected)} className={styles.burger}>
           <span
-            className={`${styles.bar} ${selected ? styles.actbar : ""}`}
+            className={`${styles.bar} ${selected ? styles.activeBar : ""}`}
           ></span>
           <span
-            className={`${styles.bar} ${selected ? styles.actbar : ""}`}
+            className={`${styles.bar} ${selected ? styles.activeBar : ""}`}
           ></span>
           <span
-            className={`${styles.bar} ${selected ? styles.actbar : ""}`}
+            className={`${styles.bar} ${selected ? styles.activeBar : ""}`}
           ></span>
         </label>
         <Link

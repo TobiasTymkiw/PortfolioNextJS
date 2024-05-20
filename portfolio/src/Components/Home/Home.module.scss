@@ -1,7 +1,7 @@
 @import "../../../styles/styles.scss";
 
 .home {
-  @include section;
+  @include homeSection;
 }
 .container {
   @include flex-row;
@@ -104,7 +104,7 @@
       transform: scale(1.05);
     }
   }
-  .divimg {
+  .divImg {
     position: relative;
     width: 400px;
     height: 400px;

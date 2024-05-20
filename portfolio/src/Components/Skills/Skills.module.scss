@@ -7,7 +7,6 @@
 .container {
   @include container-width-padding;
   @include flex-column;
-  padding: 100px 0px 0px;
   align-items: center;
   cursor: default;
   @include responsive("Tablet") {
@@ -24,7 +23,7 @@
     font-size: 18px;
     font-weight: 500;
   }
-  .infocontainer {
+  .infoContainer {
     @include flex-row;
     width: 100%;
     justify-content: center;
@@ -52,17 +51,17 @@
         font-size: 20px;
         margin: 0 0 20px;
       }
-      .groupseparation {
+      .groupSeparation {
         @include flex-row;
         gap: 40px;
         @include responsive("Tablet") {
           gap: 20px;
         }
       }
-      .skillsgroup {
+      .skillsGroup {
         width: 100%;
         @include flex-column;
-        .skillsdata {
+        .skillsData {
           @include flex-row;
           gap: 10px;
           padding: 10px 0px;

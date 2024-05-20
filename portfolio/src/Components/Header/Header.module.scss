@@ -116,17 +116,17 @@
     position: relative;
   }
 
-  .actbar:nth-child(1) {
+  .activeBar:nth-child(1) {
     transform: rotate(45deg);
     bottom: -14px;
   }
-  .actbar:nth-child(2) {
+  .activeBar:nth-child(2) {
     /* position: absolute;
     width: 0; */
     opacity: 0;
     /* display: none;  */
   }
-  .actbar:nth-child(3) {
+  .activeBar:nth-child(3) {
     top: -14px;
     position: relative;
     transform: rotate(-45deg);

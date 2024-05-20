@@ -5,12 +5,12 @@ import { useEffect } from "react";
 import handleSubmitFireBase from "../../FireBase/Handles/HandleSubmit";
 import imgComment from "../../assets/Home/message-2-line.svg";
 import imgMail from "../../assets/Contact/mail-send-line.svg";
-import imgWhats from "../../assets/Contact/whatsapp-line.svg";
+//import imgWhats from "../../assets/Contact/whatsapp-line.svg";
 import imgLinkedin from "../../assets/Home/linkedin-box-fill.svg";
 import imgArrow from "../../assets/Contact/arrow-right-line.svg";
 import Image from "next/image";
 
-interface infoform {
+interface formInfo {
   firstName: string;
   email: string;
   message: string;
@@ -48,7 +48,7 @@ export default function Contact() {
     formState: { isSubmitSuccessful },
   } = useForm({ defaultValues: { firstName: "", email: "", message: "" } });
 
-  const onSubmit = (data: infoform) => {
+  const onSubmit = (data: formInfo) => {
     handleSubmitFireBase(data);
   };
   useEffect(() => {
@@ -56,7 +56,6 @@ export default function Contact() {
   }, [isSubmitSuccessful, reset]);
 
   return (
-    <>
       <section id="contactSection" className={styles.contact}>
         <div className={styles.container}>
           <h2>Get in touch</h2>
@@ -153,6 +152,5 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </>
   );
 }
