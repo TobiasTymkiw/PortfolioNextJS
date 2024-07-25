@@ -6,7 +6,16 @@ export default function Qualifications() {
     ". " +
     Date().split(" ").splice(1, 3)[2];
 
-  const studies = [
+  interface researches {
+    title: string;
+    time: string;
+    where: string;
+    description?: string;
+    position: string;
+    href?: string;
+  }
+
+  const studies: researches[] = [
     {
       title: "Fundamentals of Programming",
       time: "May. 2021 - Jul. 2021",
@@ -33,24 +42,27 @@ export default function Qualifications() {
       href: "https://proyment.com",
     },
     {
-      title: "Spaceos WebPage Work Experience",
+      title: "SPACEOS WebPage Work Experience",
       time: `May. 2023 - Sep. 2023`, //////////////////////PRESENT
-      where: "Spaceos",
+      where: "SPACEOS",
       position: "left",
       href: "https://www.spaceos.com.pe",
-    },{
+    },
+    {
       title: "Redesign of their website and made integrations",
-      time: `Mar. 2023 -  ${present}`,
+      time: `Aug. 2023 - Oct. 2023 `,
       where: "Proyment",
       position: "right",
       href: "https://proyment.com",
     },
-    /* {
-      title: "Something5",
-      time: "2021 - 2022",
-      where: "soyHenry",
+    {
+      title: "Spaceos Web Application",
+      time: "Dec. 2023 - May. 2024",
+      where: "SPACEOS",
       position: "left",
+      href: "https://www.spaceos.com.pe",
     },
+    /* 
     {
       title: "Something6",
       time: "2021 - 2022",
@@ -93,6 +105,9 @@ export default function Qualifications() {
           ) : (
             <h2>{content.title}</h2>
           )}
+          {content.description && (
+            <p className={styles.expandible}>{content.description}</p>
+          )}
           <small>{content.time}</small>
           <p>{content.where}</p>
         </div>
@@ -100,15 +115,15 @@ export default function Qualifications() {
     );
   };
   return (
-      <section id="experienceSection" className={styles.qualification}>
-        <div className={styles.container}>
-          <h2>Experiences</h2>
-          <p>My personal journey</p>
-          <div className={styles.timeline}>
-            <div className={styles.line}></div>
-            {studies.map((st) => renderView(st))}
-          </div>
+    <section id="experienceSection" className={styles.qualification}>
+      <div className={styles.container}>
+        <h2>Experiences</h2>
+        <p>My personal journey</p>
+        <div className={styles.timeline}>
+          <div className={styles.line}></div>
+          {studies.map((st) => renderView(st))}
         </div>
-      </section>
+      </div>
+    </section>
   );
 }
