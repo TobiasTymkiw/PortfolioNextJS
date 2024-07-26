@@ -23,7 +23,7 @@ export default function AboutMe() {
               <div className={styles.cardsContainer}>
                 <div className={styles.box}>
                   <h3>Completed</h3>
-                  <p>19+ Projects</p>
+                  <p>22+ Projects</p>
                 </div>
                 <div className={styles.box}>
                   <h3>Experience</h3>
