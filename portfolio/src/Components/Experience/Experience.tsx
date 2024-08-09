@@ -67,7 +67,7 @@ export default function Qualifications() {
     {
       title: "SPACEOS Extension - Work Experience",
       time: `May. 2024 - Jul. 2024`,
-      where: "Personal Project",
+      where: "SPACEOS",
       description:
         "1. Two new Landings with a form\n2. File upload and management\n3. Google Nearby API Integration\n4. Maintenance on a VPS \n5. Nginx configuration to domains and subdomains\n6. PM2 for Nodejs projects",
       position: "right",
