@@ -71,6 +71,7 @@ export default function Qualifications() {
       description:
         "1. Two new Landings with a form\n2. File upload and management\n3. Google Nearby API Integration\n4. Maintenance on a VPS \n5. Nginx configuration to domains and subdomains\n6. PM2 for Nodejs projects",
       position: "right",
+      href: "https://www.spaceos.com.pe",
     },
     {
       title: "Self Hosted Server - Side project",

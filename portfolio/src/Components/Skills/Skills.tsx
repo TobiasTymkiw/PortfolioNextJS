@@ -8,6 +8,7 @@ export default function Skills() {
         <h2>Skills</h2>
         <p>My technical level</p>
         <div className={styles.infoContainer}>
+          {/* FirstBox */}
           <div className={styles.box}>
             <h3>Front-End Development</h3>
             <div className={styles.groupSeparation}>

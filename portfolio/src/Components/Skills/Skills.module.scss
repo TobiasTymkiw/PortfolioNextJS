@@ -6,6 +6,8 @@
 
 .container {
   @include container-width-padding;
+  padding-right: 0px;
+  padding-left: 0px;
   @include flex-column;
   align-items: center;
   cursor: default;
