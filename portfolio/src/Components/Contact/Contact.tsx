@@ -11,6 +11,7 @@ import imgLinkedin from "../../assets/Home/linkedin-box-fill.svg";
 import imgArrow from "../../assets/Contact/arrow-right-line.svg";
 import Image from "next/image";
 import infoform from "@/types";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const cardsInfo = [
@@ -45,15 +46,25 @@ export default function Contact() {
   /* const onSubmit = (data: infoform) => {
     handleSubmitFireBase(data);
   }; */
-  const onSubmit = async (data: infoform) => {
-    //handleSubmitEmail(data);
-    console.log(data);
-    const response = await fetch("/api/nodemailer", {
-      method: "POST",
-      body: JSON.stringify(data),
-    }).then((res) => res.json());
-    response.ok
-      ? Swal.fire({
+
+  const sendEmailJS = (data: infoform) => {
+    // Define las variables para tu servicio, plantilla y clave pública de EmailJS
+    const YOUR_SERVICE_ID = "service_nxniab9";
+    const YOUR_TEMPLATE_ID = "template_srqn11u";
+    const YOUR_PUBLIC_KEY = "uhbF4tADNy236GT7Q";
+
+    // Prepara los datos del formulario para enviar
+    const templateParams = {
+      firstName: data.firstName,
+      email: data.email,
+      message: data.message,
+    };
+
+    // Envía el formulario utilizando EmailJS
+    emailjs
+      .send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, templateParams, YOUR_PUBLIC_KEY)
+      .then((response) => {
+        Swal.fire({
           icon: "success",
           title: "Good job!",
           text: "The message has been sent successfully!",
@@ -62,8 +73,11 @@ export default function Contact() {
           confirmButtonColor: "rgb(65, 24, 24)",
           allowOutsideClick: false,
           showConfirmButton: false,
-        })
-      : Swal.fire({
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+        Swal.fire({
           icon: "error",
           title: "Oops...",
           text: "Something went wrong!",
@@ -73,7 +87,11 @@ export default function Contact() {
           allowOutsideClick: false,
           //showConfirmButton: false,
         });
-    console.log(response);
+      });
+  };
+  const onSubmit = async (data: infoform) => {
+    //handleSubmitEmail(data);
+    sendEmailJS(data);
   };
 
   useEffect(() => {
