@@ -1,11 +1,11 @@
 "use client";
-import React, { Fragment } from "react";
+import React from "react";
 import LinkedinSVG from "../../assets/Home/linkedin-box-fill.svg";
 import GitHubSVG from "../../assets/Home/github-fill.svg";
 import chatImg from "../../assets/Home/message-2-line.svg";
 import portrait from "../../assets/Home/CV Image.jpeg";
 import Image from "next/image";
-/* import portrait2 from "../../assets/Home/HomeProfile.jpg";*/
+//import portrait2 from "../../assets/Home/HomeProfile.jpg";
 import styles from "./Home.module.scss";
 
 export default function Home() {
@@ -13,7 +13,6 @@ export default function Home() {
     document.getElementById(scrollToId)?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <Fragment>
       <section id="homeSection" className={styles.home}>
         <div className={styles.container}>
           <div className={styles.linksIcon}>
@@ -49,10 +48,12 @@ export default function Home() {
                 <p>🖐</p>
               </h1>
               <h1>
-                <span>----</span>I&apos;m Tobias Tymkiw
+                <span>---</span>I&apos;m Tobias Tymkiw
               </h1>
               <p>
-                A Full-Stack web Developer based in Chaco,Argentina. I&apos;m
+                A Linux / Hardware enthusiast and CS50 student working 
+                as Full-Stack Web Developer. <br />
+                Based in Chaco, Argentina. I&apos;m
                 very passionate and dedicated to my work.
               </p>
               {/* Contact button to that section */}
@@ -65,11 +66,10 @@ export default function Home() {
               <Image src={chatImg} alt="Message-Icon" />
             </button>
           </div>
-          <div className={styles.divimg}>
+          <div className={styles.divImg}>
             <Image src={portrait} alt="CV-Img" className={styles.imgProfile} />
           </div>
         </div>
       </section>
-    </Fragment>
   );
 }

@@ -9,16 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@types/node": "20.4.5",
-    "@types/react": "18.2.17",
-    "@types/react-dom": "18.2.7",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "caniuse-lite": "^1.0.30001620",
     "eslint": "8.45.0",
-    "eslint-config-next": "13.4.12",
+    "eslint-config-next": "^14.2.5",
     "firebase": "^10.1.0",
-    "next": "13.4.12",
+    "next": "^14.2.5",
     "next-sitemap": "^4.2.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "nodemailer": "^6.9.14",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-hook-form": "^7.45.2",
     "react-scroll": "^1.8.9",
     "react-use-downloader": "^1.2.4",
@@ -27,6 +30,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@types/nodemailer": "^6.4.15",
     "@types/react-scroll": "^1.8.9"
   }
 }

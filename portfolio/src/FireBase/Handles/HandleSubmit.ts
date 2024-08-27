@@ -1,12 +1,7 @@
 import { addDoc, collection } from "@firebase/firestore";
 import { firestore } from "../fireBaseSetup";
 import Swal from "sweetalert2";
-
-interface infoform {
-  firstName: string,
-  email: string,
-  message: string
-}
+import infoform from "@/types";
 
 const handleSubmitFireBase = (infoform: infoform) => {
   const ref = collection(firestore, "messagesFromPortfolio"); // Firebase creates this automatically
@@ -16,32 +11,34 @@ const handleSubmitFireBase = (infoform: infoform) => {
     Message: infoform.message,
   };
   try {
-    addDoc(ref, data).then((ref) => {
-      Swal.fire({
-        icon: "success",
-        title: "Good job!",
-        text: "The message has been sent successfully!",
-        background: "#131111",
-        timer: 1800,
-        confirmButtonColor: "rgb(65, 24, 24)",
-        allowOutsideClick: false,
-        showConfirmButton: false,
-      })
-    }, (ref) => {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: ref//'Something went wrong!
-        ,
-        background: "#131111",
-       //timer: 1800,
-        confirmButtonColor: "rgb(65, 24, 24)",
-        allowOutsideClick: false,
-        //showConfirmButton: false,
-      })
-    })
+    addDoc(ref, data).then(
+      (ref) => {
+        Swal.fire({
+          icon: "success",
+          title: "Good job!",
+          text: "The message has been sent successfully!",
+          background: "#131111",
+          timer: 1800,
+          confirmButtonColor: "rgb(65, 24, 24)",
+          allowOutsideClick: false,
+          showConfirmButton: false,
+        });
+      },
+      (ref) => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: ref, //'Something went wrong!
+          background: "#131111",
+          //timer: 1800,
+          confirmButtonColor: "rgb(65, 24, 24)",
+          allowOutsideClick: false,
+          //showConfirmButton: false,
+        });
+      }
+    );
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 };
 export default handleSubmitFireBase;
