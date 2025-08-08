@@ -22,6 +22,9 @@
     font-size: 18px;
     font-weight: 600;
   }
+    @include responsive("Tablet") {
+    padding: 100px 5vw 0px;
+  }
 }
 
 .timeline {
@@ -31,111 +34,61 @@
   max-width: 1300px;
   .line {
     position: absolute;
-    left: 0;
+    left: 8px;
+    top:5px;
     right: 0;
     bottom: 0;
-    margin: auto;
-    height: 97%;
-    width: 4px;
+    height: 100%;
+    width: 5px;
     background: rgb(146, 58, 58);
     z-index: 3;
     opacity: 0.7;
     transition: 0.3s;
-    @include responsive("phone-L") {
-      margin: 0px 0px 0px 25%;
-    }
-    @include responsive("phone-M-L") {
-      margin: 0px 0px 0px 5%;
-    }
+    
   }
   .container {
     padding: 0;
     position: relative;
-    width: 50%;
     transition: 0.2s;
-    @include responsive("phone-L") {
+    /* @include responsive("phone-L") {
       width: 70%;
     }
     @include responsive("phone-M-L") {
       width: 100%;
-    }
+    } */
   }
-  .right {
-    position: relative;
-    right: -50%;
-    transition: 0.2s;
-    @include responsive("phone-L") {
-      left: 25%;
-    }
-    @include responsive("phone-M-L") {
-      left: 5%;
-    }
-  }
-  .left {
-    position: relative;
-    left: 0;
-    transition: 0.2s;
-    @include responsive("phone-L") {
-      left: 25%;
-    }
-    @include responsive("phone-M-L") {
-      left: 5%;
-    }
-  }
+  
   .point {
     position: absolute;
     width: 20px;
     height: 20px;
     background-color: $generalFontColor;
     border-radius: 50%;
-    top: 10%;
+    top: 5px;
+    left: 0px;
+    right: 0;
     z-index: 4;
     transition: 0.2s;
   }
-  .pright {
-    transition: 0.2s;
-    left: -10px;
-    @include responsive("phone-L") {
-      left: -8px;
-    }
-  }
-  .pleft {
-    transition: 0.2s;
-    right: -10px;
-    @include responsive("phone-L") {
-      left: -8px;
-    }
-  }
   .textbox {
-    width: 245px;
-    padding: 0px 15px 10px 15px;
+    width: 90%;
+    padding: 0px 15px 15px 15px;
     position: relative;
     /* background: rgb(146, 58, 58); */
     border-radius: 6px;
     font-size: 15px;
     transition: 0.2s;
-    .expandible {
+    .text {
       white-space: pre-wrap;
-      max-height: 0px;
-      height: auto;
-      transition: 0.6s ease-in-out;
-      overflow: hidden;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       color: #dcdcdc;
     }
-    @include responsive("phone-L") {
-      padding: 0px 30px 40px 30px;
-.expandible{
-  max-height: 400px;
-}
-    }
+     @include responsive("phone-L") {
+      width: 80%;
+    } 
     h2 {
+      margin-bottom: 8px;
       font-size: 24px;
-    }
-  }
-  .textbox:hover {
-    .expandible {
-      max-height: 400px;
     }
   }
 }

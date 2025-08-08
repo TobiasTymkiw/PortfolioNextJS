@@ -2,8 +2,6 @@
 
 $generalBackground: #131111;
 $buttonBackground: rgb(65, 24, 24);
-//$generalFontColor: #f0e9d2;
-//$generalFontColor: #f1faee;
 $generalFontColor: #fffdfd;
 
 @mixin container-width-padding {
@@ -30,7 +28,7 @@ $generalFontColor: #fffdfd;
   min-width: 202px;
   height: 64px;
   width: 50%;
-  background: rgb(65, 24, 24);
+  background: $buttonBackground;
   border: none;
   border-radius: 8px;
   color: $generalFontColor;

@@ -43,10 +43,6 @@ export default function Contact() {
     formState: { isSubmitSuccessful },
   } = useForm({ defaultValues: { firstName: "", email: "", message: "" } });
 
-  /* const onSubmit = (data: infoform) => {
-    handleSubmitFireBase(data);
-  }; */
-
   const sendEmailJS = (data: infoform) => {
     // Define las variables para tu servicio, plantilla y clave pública de EmailJS
     const YOUR_SERVICE_ID = "service_nxniab9";
