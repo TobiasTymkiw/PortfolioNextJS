@@ -10,6 +10,7 @@
     @include flex-column;
     align-items: center;
     h2 {
+      color:$buttonFontColor;
       margin: 0;
       font-weight: 600;
       font-size: 34px;
@@ -29,7 +30,7 @@
         cursor: pointer;
         /* height: 37px; */
         background: transparent;
-        color: $generalFontColor;
+        color: $buttonFontColor;
         text-decoration: none;
         font-size: 18px;
         font-weight: 800;
@@ -39,7 +40,7 @@
         .line {
           width: 0;
           height: 1px;
-          background: $generalFontColor;
+          background: $buttonFontColor;
           transition: 0.4s;
         }
       }
@@ -88,11 +89,11 @@
     font-weight: 700;
     cursor: pointer;
 
-    border: $generalFontColor 2px solid;
+    border: $buttonFontColor 2px solid;
     border-radius: 8px;
     /* background-color: #131111; */
     background-color: $buttonBackground;
-    color: $generalFontColor;
+    color: $buttonFontColor;
 
     display: flex;
     align-items: center;

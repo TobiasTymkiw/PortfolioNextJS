@@ -122,6 +122,7 @@ export default function Contact() {
               <div className={styles.casillero}>
                 <label>Name</label>
                 <input
+                  autoComplete="off"
                   type="text"
                   placeholder="Insert your name..."
                   {...register("firstName", {
@@ -149,6 +150,7 @@ export default function Contact() {
                 <label>Email</label>
                 <input
                   type="text"
+                  autoComplete="off"
                   placeholder="Insert your email..."
                   {...register("email", {
                     required: true,

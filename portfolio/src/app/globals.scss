@@ -9,10 +9,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $generalBackground;
-  /* background: #3c2a21; */
-  color: $generalFontColor;
+  color: $TitleFontColor;
   p {
-    color: #a8a8a8;
+    color: $paragraphFontColor;
   }
 }
 

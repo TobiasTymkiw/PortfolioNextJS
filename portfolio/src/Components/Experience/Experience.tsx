@@ -46,9 +46,6 @@ export default function Qualifications() {
       time: "May. 2023 - Nov. 2024",
       where: "SPACEOS",
       description:"● Designed and developed dynamic and responsive web interfaces for administrators, employees, and end users, utilizing Next.js to ensure a seamless and accessible user experience. \n● Implement user authentication systems through Google Auth, email validation, and phone verification, integrating Google API services for secure and efficient user management.\n● Configure and manage PostgreSQL databases on VPS servers, leveraging Prisma ORM for modeling and queries, ensuring backend scalability and performance.\n● Optimize multimedia resource upload and storage processes by integrating services such as Cloudinary. \n● Management and maintain VPS servers in Ubuntu/Linux environments, including configuring Nginx for domains and subdomains, and using tools like MobaXterm and PM2 for monitoring, deployment, and production application execution. \n● Apply SEO practices for effective project indexing on the web.",
-     /*  description:
-        "1. Dashboard (Admin, Employees, Users).\n2. User authentication using Google Auth or emails through Next Auth.\n3. Information upload process for real state properties.\n4. Image upload, storage and management.\n5. Back-end with prisma as ORM and PostgreSQL DataBase on a VPS", */
-      href: "https://www.spaceos.com.pe",
     },
     {
       title: "Self Hosted Server - Side project",
@@ -79,7 +76,7 @@ export default function Qualifications() {
           {content.description && (
             <p className={styles.text}>{content.description}</p>
           )}
-          <small>{content.time}</small>
+          <h3>{content.time}</h3>
           <p>{content.where}</p>
         </div>
       </div>

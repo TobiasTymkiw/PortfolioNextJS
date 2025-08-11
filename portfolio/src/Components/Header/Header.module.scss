@@ -64,7 +64,7 @@
 .button {
   position: relative;
   background-color: $generalBackground;
-  color: $generalFontColor;
+  color: $buttonFontColor;
   text-decoration: none;
   font-size: 18px;
   font-weight: 800;
@@ -78,7 +78,7 @@
   .line {
     width: 0;
     height: 1px;
-    background: $generalFontColor;
+    background: $buttonFontColor;
     transition: 0.4s;
   }
 }
@@ -110,7 +110,7 @@
     width: 35px;
     height: 4px;
     margin-bottom: 10px;
-    background-color: $generalFontColor;
+    background-color: $TitleFontColor;
     border-radius: 10%;
     transition: 0.4s;
     position: relative;

@@ -51,13 +51,13 @@ export default function Home() {
                 <span>---</span>I&apos;m Tobias Tymkiw
               </h1>
               <p>
-                A Linux / Hardware enthusiast and CS50 student working 
+                A Linux / Hardware enthusiast and CyberSecurity student working 
                 as Full-Stack Web Developer. <br />
-                Based in Chaco, Argentina. I&apos;m
-                very passionate and dedicated to my work.
+                Based in Argentina. I&apos;m
+                very dedicated to my work.
               </p>
-              {/* Contact button to that section */}
             </div>
+              {/* Contact button to that section */}
             <button
               className={styles.contactButton}
               onClick={() => handleClickNav("contactSection")}
