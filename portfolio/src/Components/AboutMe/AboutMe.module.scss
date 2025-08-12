@@ -19,7 +19,7 @@
   }
   p {
     margin: 0;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
   }
 }
@@ -50,7 +50,7 @@
       right: -5px;
     }
     @include responsive("Tablet") {
-      border-radius: 35% 35% 35% 35%;
+      border-radius: 20%;
       height: 360px;
       width: 360px;
       margin-bottom: 20px;
@@ -90,7 +90,7 @@
         width: 130px;
         min-width: 130px;
         height: auto;
-        background: rgb(65, 24, 24);
+        background: $buttonBackground;
         border-radius: 8px;
         padding: 20px 15px;
         @include responsive("Tablet") {
@@ -100,9 +100,10 @@
           margin: 0 0 13px;
           font-size: 20px;
           font-weight: 600;
+          color:$buttonFontColor
         }
         p {
-          font-size: 16px;
+          font-size: 18px;
           font-weight: 500;
           text-align: center;
         }
@@ -117,7 +118,7 @@
     }
   }
   .aboutText {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     @include responsive("Tablet") {
       max-width: 95vw;

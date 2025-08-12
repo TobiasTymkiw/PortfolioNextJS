@@ -1,14 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Inter:wght@400;600;700&display=swap");
 
-$generalBackground: #131111;
+/* $generalBackground: #131111;
 $buttonBackground: rgb(65, 24, 24);
-$generalFontColor: #fffdfd;
+$generalFontColor: #fffdfd; */
+$generalBackground: #131111;//Rich Black
+//$buttonBackground: #302F4D;//Space cadet
+$buttonBackground: #302F4D;//Space cadet
+$buttonFontColor:#ffffff;
+$TitleFontColor: #4F518C;
+$paragraphFontColor: #c4c4c4;
 
 @mixin container-width-padding {
   width: 100%;
-  padding: 100px 230px 0px;
+  max-width: 980px;
+  box-sizing: border-box;
+  padding: 100px 0px 0px;
   @include responsive("Tablet") {
-    padding: 100px 14vw 0px;
+    padding: 100px 5vw 0px;
   }
 }
 
@@ -31,7 +39,7 @@ $generalFontColor: #fffdfd;
   background: $buttonBackground;
   border: none;
   border-radius: 8px;
-  color: $generalFontColor;
+  color: $buttonFontColor;
   font-size: 18px;
   font-weight: 700;
   /* Animation */

@@ -1,4 +1,4 @@
-import infoform from "@/types";
+import {infoform} from "@/types";
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 

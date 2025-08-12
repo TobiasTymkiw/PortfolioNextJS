@@ -3,14 +3,13 @@ import styles from "./Contact.module.scss";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import Swal from "sweetalert2";
-//import handleSubmitFireBase from "../../FireBase/Handles/HandleSubmit";
 import imgComment from "../../assets/Home/message-2-line.svg";
 import imgMail from "../../assets/Contact/mail-send-line.svg";
 //import imgWhats from "../../assets/Contact/whatsapp-line.svg";
 import imgLinkedin from "../../assets/Home/linkedin-box-fill.svg";
 import imgArrow from "../../assets/Contact/arrow-right-line.svg";
 import Image from "next/image";
-import infoform from "@/types";
+import { infoform } from "@/types";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
@@ -86,7 +85,6 @@ export default function Contact() {
       });
   };
   const onSubmit = async (data: infoform) => {
-    //handleSubmitEmail(data);
     sendEmailJS(data);
   };
 
@@ -122,6 +120,7 @@ export default function Contact() {
               <div className={styles.casillero}>
                 <label>Name</label>
                 <input
+                  autoComplete="off"
                   type="text"
                   placeholder="Insert your name..."
                   {...register("firstName", {
@@ -149,6 +148,7 @@ export default function Contact() {
                 <label>Email</label>
                 <input
                   type="text"
+                  autoComplete="off"
                   placeholder="Insert your email..."
                   {...register("email", {
                     required: true,

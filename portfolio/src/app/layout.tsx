@@ -2,6 +2,7 @@ import "./globals.scss";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { siteConfig } from "@/config";
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"] });
 const jsonLd = {
@@ -25,7 +26,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteConfig.url,
   },
-  keywords: ["portfolio", "tobias", "tymkiw", "tobias tymkiw", 'curriculum','cv'],
+  keywords: [
+    "portfolio",
+    "tobias",
+    "tymkiw",
+    "tobias tymkiw",
+    "curriculum",
+    "cv",
+  ],
   openGraph: {
     type: "website",
     locale: "en",
@@ -51,6 +59,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Analytics />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
         {children}
         <script
           type="application/ld+json"

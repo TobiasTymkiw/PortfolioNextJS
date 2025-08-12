@@ -3,5 +3,11 @@ interface infoform {
   email: string;
   message: string;
 }
-
-export default infoform;
+interface experience {
+    title: string;
+    time: string;
+    where: string;
+    description?: string;
+    href?: string;
+}
+export type { infoform, experience };
