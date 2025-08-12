@@ -18,13 +18,18 @@ export default function Header() {
     /* "Projects", */
     "Contact",
   ];
+  const [selected, setSelected] = useState(false);
+  const handleSelect = (selected: boolean) => {
+    setSelected(!selected);
+  };
 
   const renderNavLink = (content: string) => {
     const scrollToId = `${content.toLocaleLowerCase()}Section`;
 
     return (
-      <li key={content}>
+      <li key={content} className={styles.links}>
         <Link
+          onClick={() => handleSelect(selected)}
           activeClass={styles.active}
           className={styles.button}
           to={scrollToId}
@@ -38,11 +43,6 @@ export default function Header() {
         </Link>
       </li>
     );
-  };
-
-  const [selected, setSelected] = useState(false);
-  const handleSelect = (selected: boolean) => {
-    setSelected(!selected);
   };
 
   return (

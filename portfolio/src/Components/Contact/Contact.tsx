@@ -10,7 +10,7 @@ import imgMail from "../../assets/Contact/mail-send-line.svg";
 import imgLinkedin from "../../assets/Home/linkedin-box-fill.svg";
 import imgArrow from "../../assets/Contact/arrow-right-line.svg";
 import Image from "next/image";
-import infoform from "@/types";
+import {infoform} from "@/types";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {

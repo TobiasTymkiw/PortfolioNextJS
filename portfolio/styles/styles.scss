@@ -12,9 +12,11 @@ $paragraphFontColor: #c4c4c4;
 
 @mixin container-width-padding {
   width: 100%;
-  padding: 100px 230px 0px;
+  max-width: 980px;
+  box-sizing: border-box;
+  padding: 100px 0px 0px;
   @include responsive("Tablet") {
-    padding: 100px 14vw 0px;
+    padding: 100px 5vw 0px;
   }
 }
 

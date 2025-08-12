@@ -8,20 +8,13 @@
   @include container-width-padding;
   /*   padding-left: 12vw;
   padding-right: 12vw; */
-  padding-left: 0vw;
-  padding-right: 0vw;
+  padding-left: 0px;
+  padding-right: 0px;
   align-items: center;
   max-width: 950px;
   cursor: default;
   transition: 0.4s;
-  @include responsive("NavBar") {
-    padding-left: 7vw;
-    padding-right: 7vw;
-  }
-  @include responsive("phone-M") {
-    padding-left: 5vw;
-    padding-right: 5vw;
-  }
+  
   h2 {
     margin: 0;
     font-weight: 700;

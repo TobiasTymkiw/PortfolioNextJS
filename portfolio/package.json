@@ -26,11 +26,13 @@
     "react-scroll": "^1.8.9",
     "react-use-downloader": "^1.2.4",
     "sass": "^1.64.1",
-    "sweetalert2": "^11.7.20",
+    "sweetalert2": "^11.6.13",
+    "swiper": "^11.2.10",
     "typescript": "5.1.6"
   },
   "devDependencies": {
     "@types/nodemailer": "^6.4.15",
-    "@types/react-scroll": "^1.8.9"
+    "@types/react-scroll": "^1.8.9",
+    "@types/swiper": "^5.4.3"
   }
 }

@@ -26,63 +26,67 @@
     font-weight: 500;
   }
   .infoContainer {
-    @include flex-row;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    justify-content: center;
-    padding-top: 64px;
-    gap: 6vw;
-    @include responsive("Tablet") {
-      align-items: center;
-      flex-direction: column;
+    max-width: 1300px;
+    padding-top: 58px;
+    gap: 40px;
+
+    h3 {
+      margin: 0px 0 0px;
+      font-size: 24px;
+      font-weight: 600;
     }
-    .box {
-      @include flex-column;
-      padding: 40px 30px;
-      width: 380px;
+    .swiperContainer {
+      //background: red;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+    .swiperContainer::before,
+    .swiperContainer::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      z-index: 2;
+      width: 40px; /* ancho de la sombra */
+      height: 100%;
+      pointer-events: none; /* para no bloquear clicks */
+    }
+
+    .swiperContainer::before {
+      left: 0;
+      background: linear-gradient(to right, $generalBackground 5%, transparent);
+    }
+
+    .swiperContainer::after {
+      right: 0;
+      background: linear-gradient(to left, $generalBackground 5%, transparent);
+    }
+
+    .techItem {
+      width: 140px;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      transition: 0.3s;
-      /* Box styles */
-      background: $buttonBackground;
-      border-radius: 8%;
-      box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
-        rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-      @include responsive("phone-M-L") {
-        width: 275px;
+      gap: 2px;
+      img {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 12px;
       }
-      h3 {
-        font-size: 20px;
-        color: $buttonFontColor;
-        margin: 0 0 20px;
+      h4 {
+        width: fit-content;
+        font-size: 18px;
+        margin: 0;
+        color: #ffffff;
       }
-      .groupSeparation {
-        @include flex-row;
-        gap: 40px;
-        @include responsive("Tablet") {
-          gap: 20px;
-        }
-      }
-      .skillsGroup {
-        width: 100%;
-        @include flex-column;
-        .skillsData {
-          @include flex-row;
-          gap: 10px;
-          padding: 10px 0px;
-          img {
-            margin-top: 3px;
-            width: 24px;
-            height: 24px;
-          }
-          h3 {
-            color: $buttonFontColor;
-            font-size: 18px;
-            margin: 0;
-          }
-          p {
-            margin-top: 10px;
-            font-size: 14px;
-          }
-        }
+      p {
+        color: $paragraphFontColor;
+        font-size: 14px;
+        margin: 0;
       }
     }
   }

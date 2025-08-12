@@ -22,9 +22,6 @@
     font-size: 18px;
     font-weight: 600;
   }
-  @include responsive("Tablet") {
-    padding: 100px 5vw 0px;
-  }
 }
 
 .timeline {

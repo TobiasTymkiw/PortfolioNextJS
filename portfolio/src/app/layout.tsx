@@ -25,7 +25,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteConfig.url,
   },
-  keywords: ["portfolio", "tobias", "tymkiw", "tobias tymkiw", 'curriculum','cv'],
+  keywords: [
+    "portfolio",
+    "tobias",
+    "tymkiw",
+    "tobias tymkiw",
+    "curriculum",
+    "cv",
+  ],
   openGraph: {
     type: "website",
     locale: "en",
@@ -51,6 +58,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
         {children}
         <script
           type="application/ld+json"
