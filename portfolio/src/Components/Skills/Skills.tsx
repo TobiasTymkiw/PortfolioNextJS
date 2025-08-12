@@ -13,6 +13,7 @@ import ipfsIcon from "@/assets/Skills/ipfs-logo.svg";
 import ozIcon from "@/assets/Skills/oz-iso.svg";
 
 //Carrousel configuration
+const speed = 5000;
 const spaceBetween = 50;
 const breakpoints = {
   340: { slidesPerView: 3 },
@@ -32,7 +33,7 @@ export default function Skills() {
               modules={[Autoplay]}
               spaceBetween={spaceBetween}
               loop={true}
-              speed={3000}
+              speed={speed}
               slidesPerView={4}
               autoplay={{
                 delay: 0,
@@ -63,7 +64,7 @@ export default function Skills() {
               modules={[Autoplay]}
               spaceBetween={spaceBetween}
               loop={true}
-              speed={3000}
+              speed={speed}
               slidesPerView={4}
               autoplay={{
                 reverseDirection: true,
@@ -95,7 +96,7 @@ export default function Skills() {
               modules={[Autoplay]}
               spaceBetween={spaceBetween}
               loop={true}
-              speed={3000}
+              speed={speed}
               slidesPerView={4}
               autoplay={{
                 delay: 0,

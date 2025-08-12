@@ -14,6 +14,7 @@ const experiences: experience[] = [
     {
         title: `Academic - Rebirth Project`,
         time: "Jul. 2022 - Aug. 2022",
+        description: "● Designed corporate image and led UI/UX development for a pet adoption app, enhancing user engagement and usability.\n● Collaborated in an agile SCRUM team with one-week sprints, presenting progress to the Product Owner and managing tasks via Kanban in Trello and Slack.\n● Developed core features including CRUD operations, authentication, and MercadoPago payment gateway integration for pet donations.\n● Utilized React, Redux, Bootstrap, Node.js, Express, Sequelize, and Git/GitHub for full-stack development.",
         where: "Soy Henry",
 
         href: "https://frontend-rebirth.vercel.app/",
@@ -37,15 +38,15 @@ const experiences: experience[] = [
         title: "Self Hosted Server - Side project",
         time: `Jul. 2024 - Aug. 2024`,
         where: "Personal Project",
-        description:
-            "1. Ubuntu server\n2. Plex media service\n3. Personal media storage \n4. Databases practise \n5. Nginx test envioremnt\n6. Network Management\n7. Host web Pages",
+        description: "● Configure the hardware of an old computer for use as a home server.\n● Manage the storage and organization of personal files on the server.\n● Implement and manage databases for learning practices and projects.\n● Host and test web pages using Nginx as a web server in a controlled environment"
+        // description:"1. Ubuntu server\n2. Plex media service\n3. Personal media storage \n4. Databases practise \n5. Nginx test envioremnt\n6. Network Management\n7. Host web Pages",
     },
     {
         title: "Octubre Rosa Parade Website - Side project",
         time: `Sep. 2024 - Oct. 2024`,
         where: "Rotaract Resistencia Oeste",
         description:
-            "Project carried out for the Rotaract Resistencia Oeste club to address the ticket management challenges for the event.\n📍Form with dynamically controlled fields to ensure ticket availability and proper purchase processing.\n📍Connected to Google Sheets to store the data submitted through the form.\n📍Integrated with Firebase using the Firestore service for storing proof of purchase in image and PDF formats.",
+            "Project carried out for the Rotaract Resistencia Oeste club to address the ticket management challenges for the event.\n● Form with dynamically controlled fields to ensure ticket availability and proper purchase processing.\n● Connected to Google Sheets to store the data submitted through the form.\n● Integrated with Firebase using the Firestore service for storing proof of purchase in image and PDF formats.",
         href: "https://rot-oct-rosa.vercel.app/",
     },
 ];
