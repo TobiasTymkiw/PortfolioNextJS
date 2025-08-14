@@ -27,7 +27,7 @@ export default function AboutMe() {
                 </div>
                 <div className={styles.box}>
                   <h3>Experience</h3>
-                  <p>2.4 years Working</p>
+                  <p>3 years Working</p>
                 </div>
 
                 <div className={`${styles.box} ${styles.box3}`}>
