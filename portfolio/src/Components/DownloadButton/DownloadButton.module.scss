@@ -1,0 +1,23 @@
+@import "../../../styles/styles.scss";
+
+.button {
+  @include button;
+  transition: transform 0.3s ease;
+  font-family: var(--font-inter), serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase; // Optional but often nicer for CTAs
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    width: 20px;
+    height: auto;
+  }
+}

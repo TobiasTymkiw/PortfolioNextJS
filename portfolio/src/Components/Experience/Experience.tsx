@@ -14,7 +14,7 @@ export default function Qualifications() {
     { id: "Side project", label: "Projects", icon: "ri-code-s-slash-line" },
   ] as const;
 
-  const [activeTab, setActiveTab] = useState<(typeof TABS)[number]["id"]>("All");
+  const [activeTab, setActiveTab] = useState<(typeof TABS)[number]["id"]>("Work");
 
   const present =
     Date().split(" ").splice(1, 3)[0] +
@@ -45,7 +45,22 @@ export default function Qualifications() {
             <h2>{content.title}</h2>
           )}
           {content.description && (
-            <p className={styles.text}>{content.description}</p>
+            <div className={styles.descriptionWrapper}>
+              {content.description
+                .split("\n")
+                .filter((line) => line.trim() !== "")
+                .map((line, index) => {
+                  const isBullet = line.trim().startsWith("●");
+                  return (
+                    <p
+                      key={index}
+                      className={`${styles.text} ${isBullet ? styles.bulletPoint : ""}`}
+                    >
+                      {line}
+                    </p>
+                  );
+                })}
+            </div>
           )}
           <h3>{content.time}</h3>
           <p>{content.where}</p>

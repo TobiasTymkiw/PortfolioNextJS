@@ -130,6 +130,7 @@
 
       @include responsive("phone-L") {
         flex-direction: column;
+        padding: 0px 0px 45px 0px;
       }
     }
 
@@ -181,9 +182,23 @@
       font-size: 15px;
       transition: 0.2s;
 
-      .text {
-        white-space: pre-wrap;
-        margin-bottom: 15px;
+      .descriptionWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 14px; // Increased spacing between points for better legibility
+        margin-bottom: 12px;
+
+        .text {
+          margin-bottom: 0;
+          line-height: 1.4;
+          font-weight: 500;
+          color: $paragraphFontColor;
+
+          &.bulletPoint {
+            padding-left: 1.4em;
+            text-indent: -1.4em;
+          }
+        }
       }
 
       h3 {
@@ -193,6 +208,7 @@
 
       @include responsive("phone-L") {
         width: 80%;
+        padding: 0px;
       }
 
       h2 {

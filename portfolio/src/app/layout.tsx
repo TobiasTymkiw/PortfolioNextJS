@@ -1,10 +1,12 @@
 import "./globals.scss";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Outfit, Alegreya } from "next/font/google";
 import { siteConfig } from "@/config";
 import { Analytics } from "@vercel/analytics/next"
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
+const outfit = Outfit({ subsets: ["latin"], variable: '--font-outfit' });
+const alegreya = Alegreya({ subsets: ["latin"], variable: '--font-alegreya' });
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Website",
@@ -58,7 +60,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${outfit.variable} ${alegreya.variable}`}>
         <Analytics />
         <link
           rel="stylesheet"

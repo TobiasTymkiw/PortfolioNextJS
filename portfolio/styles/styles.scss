@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Inter:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Inter:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap");
 
 /* $generalBackground: #131111;
 $buttonBackground: rgb(65, 24, 24);
 $generalFontColor: #fffdfd; */
-$generalBackground: #131111;//Rich Black
+$generalBackground: #131111; //Rich Black
 //$buttonBackground: #302F4D;//Space cadet
-$buttonBackground: #302F4D;//Space cadet
-$buttonFontColor:#ffffff;
+$buttonBackground: #302F4D; //Space cadet
+$buttonFontColor: #ffffff;
 $TitleFontColor: #4F518C;
 $paragraphFontColor: #c4c4c4;
 
@@ -15,6 +15,7 @@ $paragraphFontColor: #c4c4c4;
   max-width: 980px;
   box-sizing: border-box;
   padding: 100px 0px 0px;
+
   @include responsive("Tablet") {
     padding: 100px 5vw 0px;
   }
@@ -25,18 +26,21 @@ $paragraphFontColor: #c4c4c4;
   justify-content: center;
   min-height: 75vh;
 }
+
 @mixin homeSection {
   display: flex;
   justify-content: center;
-  min-height:90vh;
- 
+  min-height: 90vh;
+
 }
+
 @mixin button {
   cursor: pointer;
   min-width: 202px;
   height: 64px;
   width: 50%;
   background: $buttonBackground;
+  font-family: var(--font-inter), serif;
   border: none;
   border-radius: 8px;
   color: $buttonFontColor;
@@ -49,14 +53,17 @@ $paragraphFontColor: #c4c4c4;
   align-items: center;
   justify-content: center;
   gap: 10px;
+
   img {
     width: 20px;
   }
 }
+
 @mixin flex-column {
   display: flex;
   flex-direction: column;
 }
+
 @mixin flex-row {
   display: flex;
   flex-direction: row;
@@ -65,42 +72,49 @@ $paragraphFontColor: #c4c4c4;
 @mixin responsive($device) {
   /*MEDIA QUERIES*/
 
-  @if $device == phone-S {
+  @if $device ==phone-S {
     @media screen and (max-width: 374px) {
       @content;
     }
   }
-  @if $device == phone-M {
+
+  @if $device ==phone-M {
     @media screen and (max-width: 435px) {
       @content;
     }
   }
-  @if $device == phone-M-L {
+
+  @if $device ==phone-M-L {
     @media screen and (max-width: 595px) {
       @content;
     }
   }
-  @if $device == phone-L {
+
+  @if $device ==phone-L {
     @media screen and (max-width: 767px) {
       @content;
     }
   }
-  @if $device == NavBar {
+
+  @if $device ==NavBar {
     @media screen and (max-width: 955px) {
       @content;
     }
   }
-  @if $device == Tablet {
+
+  @if $device ==Tablet {
     @media screen and (max-width: 1023px) {
       @content;
     }
   }
-  @if $device == Laptop {
+
+  @if $device ==Laptop {
     @media screen and (max-width: 1439px) {
       @content;
     }
   }
-  @if $device == Desktop {
+
+  @if $device ==Desktop {
     @media screen and (max-width: 2560px) {
       @content;
     }

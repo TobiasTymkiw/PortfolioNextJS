@@ -2,9 +2,18 @@ import { experience } from "@/types";
 import Ethkipupic from "@/assets/Experience/2025-07-ETHKIPU-EthereumDeveloperPack-TobiasTymkiw.jpg";
 import RotaractPicOctRosa2024 from "@/assets/Experience/Rot-oct-rosa-2024.png";
 import CoderhouseCS2025 from "@/assets/Experience/2025-01-Ciberseguridad-CoderHouse-TobiasTymkiw.png";
+import CanterosPropiedadesPic from "@/assets/Experience/Canteros-Propiedades-PIC.png";
 //reverse the array
 
 const experiences: experience[] = [
+    {
+        title: "Canteros Propiedades - FullStack Job",
+        time: `Dec. 2025 - Present.`,
+        where: "Canteros Propiedades - Inmobiliaria",
+        href: "https://canteros-propiedades.vercel.app/",
+        img: CanterosPropiedadesPic,
+        type: "Work"
+    },
     {
         title: "Ethereum Developer Pack - Education",
         time: `Apr. 2025 - Jul. 2025`,
@@ -32,7 +41,7 @@ const experiences: experience[] = [
     {
         title: "CyberSecurity Analyst - Education",
         time: `Nov. 2024 - Jan. 2025`,
-        where: "CoderHouse ",
+        where: "CoderHouse",
         href: "https://drive.google.com/file/d/1w61buKB2FOOkwYAoOOzjatBGU2RehMpP/view?usp=drive_link",
         img: CoderhouseCS2025,
         type: "Education"
@@ -43,7 +52,6 @@ const experiences: experience[] = [
         where: "Personal Project",
         description: "● Configure the hardware of an old computer for use as a home server.\n● Manage the storage and organization of personal files on the server.\n● Implement and manage databases for learning practices and projects.\n● Host and test web pages using Nginx as a web server in a controlled environment",
         type: "Side project"
-        // description:"1. Ubuntu server\n2. Plex media service\n3. Personal media storage \n4. Databases practise \n5. Nginx test envioremnt\n6. Network Management\n7. Host web Pages",
     },
     {
         title: "SPACEOS Web Application - FullStack Job",
@@ -52,7 +60,6 @@ const experiences: experience[] = [
         description:
             "● Developed responsive web interfaces in Next.js for admins, employees, and end users, ensuring accessibility and a seamless experience. \n● Implemented secure user authentication with Google Auth, email, and phone verification, integrating Google API services.\n● Managed PostgreSQL databases on VPS servers with Prisma ORM, and optimized media handling via Cloudinary integration. \n● Administered Ubuntu/Linux VPS environments, configuring Nginx, managing domains, and deploying with tools like MobaXterm and PM2, while applying SEO best practices for web indexing.",
         type: "Work"
-        //description:"● Designed and developed dynamic and responsive web interfaces for administrators, employees, and end users, utilizing Next.js to ensure a seamless and accessible user experience. \n● Implement user authentication systems through Google Auth, email validation, and phone verification, integrating Google API services for secure and efficient user management.\n● Configure and manage PostgreSQL databases on VPS servers, leveraging Prisma ORM for modeling and queries, ensuring backend scalability and performance.\n● Optimize multimedia resource upload and storage processes by integrating services such as Cloudinary. \n● Management and maintain VPS servers in Ubuntu/Linux environments, including configuring Nginx for domains and subdomains, and using tools like MobaXterm and PM2 for monitoring, deployment, and production application execution. \n● Apply SEO practices for effective project indexing on the web.",
     },
     {
         title: "Proyment WebPage - FullStack Job",

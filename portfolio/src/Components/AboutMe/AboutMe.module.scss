@@ -17,6 +17,7 @@
     font-size: 38px;
     margin-bottom: 12px;
   }
+
   p {
     margin: 0;
     font-size: 22px;
@@ -29,10 +30,12 @@
   padding: 64px 0px 0px;
   width: 100%;
   justify-content: space-between;
+
   @include responsive("Tablet") {
     flex-direction: column;
     align-items: center;
   }
+
   .divImg {
     width: 42%;
     height: 555px;
@@ -49,41 +52,51 @@
       top: -140px;
       right: -5px;
     }
+
     @include responsive("Tablet") {
       border-radius: 20%;
       height: 360px;
       width: 360px;
       margin-bottom: 20px;
+
       img {
         top: -120px;
         width: 400px;
       }
     }
   }
+
   .aboutInfo {
     @include flex-column;
     width: 52%;
     position: relative;
+
     @include responsive("Tablet") {
       width: 58%;
     }
+
     @include responsive("phone-L") {
       width: 80%;
     }
+
     @include responsive("phone-M-L") {
       width: 100%;
+      max-width: 382px
     }
+
     .cardsContainer {
       @include flex-row;
       justify-content: space-between;
       gap: 10px;
       margin: 0 0 30px 0;
+
       @include responsive("Tablet") {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: minmax(auto, auto);
         gap: 10px 10px;
       }
+
       .box {
         @include flex-column;
         align-items: center;
@@ -93,21 +106,25 @@
         background: $buttonBackground;
         border-radius: 8px;
         padding: 20px 15px;
+
         @include responsive("Tablet") {
           width: auto;
         }
+
         h3 {
           margin: 0 0 13px;
           font-size: 20px;
           font-weight: 600;
-          color:$buttonFontColor
+          color: $buttonFontColor
         }
+
         p {
           font-size: 18px;
           font-weight: 500;
           text-align: center;
         }
       }
+
       .box3 {
         @include responsive("Tablet") {
           grid-column: 1 / 3;
@@ -117,33 +134,51 @@
       }
     }
   }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include responsive("Tablet") {
+      margin-bottom: 85px; // Make space for the download button on mobile
+    }
+  }
+
   .aboutText {
     font-size: 18px;
     font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+
     @include responsive("Tablet") {
       max-width: 95vw;
-      margin-bottom: 85px;
+      font-size: 16px;
+      line-height: 1.6;
     }
   }
+
   span {
     @include responsive("Tablet") {
       margin: auto;
     }
   }
 
-  button {
+  .downloadButton {
     @include button;
     /* Button position */
     bottom: 0;
     position: absolute;
+
     @include responsive("Tablet") {
       left: 0;
       right: 0;
       margin: auto auto;
       width: 100%;
     }
-  }
-  button:hover {
-    transform: scale(1.05);
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }

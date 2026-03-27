@@ -2,14 +2,9 @@
 import React, { useState } from "react";
 import styles from "./Header.module.scss";
 import { Link } from "react-scroll";
-import cvSvg from "../../assets/AboutMe/file-download-line.svg";
-import Image from "next/image";
-import useDownloader from "react-use-downloader";
+import DownloadButton from "../DownloadButton/DownloadButton";
 
 export default function Header() {
-  const { download } = useDownloader();
-  const fileURL = "/CV-TobiasTymkiw.pdf";
-  const filename = "CV-TobiasTymkiw.pdf";
   const navLinks = [
     "Home",
     "About",
@@ -73,13 +68,7 @@ export default function Header() {
         <ul className={`${styles.ul} ${selected ? styles.f : ""}`}>
           {navLinks.map((nav) => renderNavLink(nav))}
           <li>
-            <button
-              className={styles.downloadButton}
-              onClick={() => download(fileURL, filename)}
-            >
-              Download CV
-              <Image src={cvSvg} alt="Download CV" />
-            </button>
+            <DownloadButton className={styles.downloadButton} />
           </li>
         </ul>
       </nav>
