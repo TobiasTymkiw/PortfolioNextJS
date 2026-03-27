@@ -36,7 +36,7 @@ export default function Header() {
           spy={true}
           smooth={true}
           duration={900}
-          offset={5}
+          offset={-10}
         >
           {content}
           <span className={styles.line}></span>
@@ -48,17 +48,16 @@ export default function Header() {
   return (
     <header id="header" className={styles.header}>
       <nav className={styles.nav}>
-        <label onClick={() => handleSelect(selected)} className={styles.burger}>
-          <span
-            className={`${styles.bar} ${selected ? styles.activeBar : ""}`}
-          ></span>
-          <span
-            className={`${styles.bar} ${selected ? styles.activeBar : ""}`}
-          ></span>
-          <span
-            className={`${styles.bar} ${selected ? styles.activeBar : ""}`}
-          ></span>
-        </label>
+        <button
+          onClick={() => handleSelect(selected)}
+          className={`${styles.burger} ${selected ? styles.open : ""}`}
+          aria-label="Toggle Navigation"
+          aria-expanded={selected}
+        >
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+        </button>
         <Link
           activeClass={styles.active}
           className={styles.button}
@@ -66,7 +65,7 @@ export default function Header() {
           spy={true}
           smooth={true}
           duration={900}
-          offset={5}
+          offset={-70}
         >
           FullStack Developer
           <span style={{ height: "3px" }}></span>

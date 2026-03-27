@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://portfolio-tobiastymkiw.vercel.app'||'http://localhost:3000',
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://portfolio-tobiastymkiw.vercel.app',
   generateRobotsTxt: true,
 };

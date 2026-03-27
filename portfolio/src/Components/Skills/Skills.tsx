@@ -231,7 +231,7 @@ const web3Technologies = [
   {
     name: "OpenZeppelin",
     icon: ozIcon,
-    level: "beginner",
+    level: "Beginner",
   },
   {
     name: "Hardhat",

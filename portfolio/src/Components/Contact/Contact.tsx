@@ -118,8 +118,9 @@ export default function Contact() {
           <div className={styles.formContainer}>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className={styles.casillero}>
-                <label>Name</label>
+                <label htmlFor="firstName">Name</label>
                 <input
+                  id="firstName"
                   autoComplete="off"
                   type="text"
                   placeholder="Insert your name..."
@@ -145,8 +146,9 @@ export default function Contact() {
               </div>
 
               <div className={styles.casillero}>
-                <label>Email</label>
+                <label htmlFor="email">Email</label>
                 <input
+                  id="email"
                   type="text"
                   autoComplete="off"
                   placeholder="Insert your email..."
@@ -163,9 +165,10 @@ export default function Contact() {
                 )}
               </div>
               <div className={styles.casillero}>
-                <label>Massage</label>
+                <label htmlFor="message">Message</label>
                 <div className={styles.divTextArea}>
                   <textarea
+                    id="message"
                     placeholder="Insert your message..."
                     {...register("message", {
                       required: true,
@@ -177,11 +180,11 @@ export default function Contact() {
                   <p className={styles.error}>This field is required</p>
                 )}
                 {errors.message?.type === "minLength" && (
-                  <p className={styles.error}>The message is to short</p>
+                  <p className={styles.error}>The message is too short</p>
                 )}
               </div>
               <button type="submit" className={styles.btn}>
-                Send Massage
+                Send Message
                 <Image src={imgComment} alt="Icon-Message" />
               </button>
             </form>

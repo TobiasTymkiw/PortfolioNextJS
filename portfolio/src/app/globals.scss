@@ -10,9 +10,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: $generalBackground;
   color: $TitleFontColor;
+
   p {
     color: $paragraphFontColor;
   }
+
+  /* Remove Blue Link Highlights on Mobile */
+  -webkit-tap-highlight-color: transparent;
 }
 
 code {

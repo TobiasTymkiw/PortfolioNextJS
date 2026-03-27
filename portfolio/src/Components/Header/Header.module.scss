@@ -1,4 +1,5 @@
 @import "../../../styles/styles.scss";
+
 .header {
   display: flex;
   justify-content: center;
@@ -27,9 +28,11 @@
   display: flex;
   align-items: center;
   height: 100%;
-  .links{
+
+  .links {
     width: fit-content;
   }
+
   @include responsive("NavBar") {
     align-items: baseline;
     flex-direction: column;
@@ -51,11 +54,13 @@
       -4px 0px 4px -4px rgba(90, 125, 188, 0.05),
       0px -4px 4px -4px rgba(0, 0, 0, 0);
   }
+
   @include responsive("phone-M-L") {
     width: 70%;
     left: -71%;
   }
 }
+
 .f {
   left: 0;
 }
@@ -80,6 +85,7 @@
   cursor: pointer;
   @include flex-column;
   align-items: center;
+
   .line {
     width: 0;
     height: 1px;
@@ -87,6 +93,7 @@
     transition: 0.4s;
   }
 }
+
 .active {
   .line {
     width: 100%;
@@ -94,7 +101,7 @@
 }
 
 .button:hover {
-  background-color:// #703d23;
+  background-color: // #703d23;
     $buttonBackground;
 }
 
@@ -102,53 +109,76 @@
 
 .burger {
   display: none;
+
   @include responsive("NavBar") {
-    display: flex;
-    flex-direction: column;
+    display: block;
     position: absolute;
     left: 15px;
-    height: min-content;
+    width: 32px;
+    height: 24px;
+    background: transparent;
+    border: none;
     cursor: pointer;
-    padding-top: 8px;
-  }
-  .bar {
-    width: 35px;
-    height: 5px;
-    margin-bottom: 8px;
-    background-color: $TitleFontColor;
-    border-radius: 10%;
-    transition: 0.4s;
-    position: relative;
+    z-index: 100;
+    padding: 0;
   }
 
-  .activeBar:nth-child(1) {
-    transform: rotate(45deg);
-    bottom: -13px;
+  .bar {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $TitleFontColor;
+    border-radius: 4px;
+
   }
-  .activeBar:nth-child(2) {
-    /* position: absolute;
-    width: 0; */
-    opacity: 0;
-    /* display: none;  */
+
+  .bar:nth-child(1) {
+    top: 0;
+    transition: all 0.3s ease-in-out;
   }
-  .activeBar:nth-child(3) {
-    top: -13px;
-    position: relative;
-    transform: rotate(-45deg);
+
+  .bar:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .bar:nth-child(3) {
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.open {
+    .bar:nth-child(1) {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .bar:nth-child(3) {
+      bottom: 50%;
+      transform: translateY(50%) rotate(-45deg);
+    }
   }
 }
 
 .downloadButton {
   display: none;
+
   @include responsive("NavBar") {
     @include button;
 
     /* Button position */
     //position: absolute;
     //bottom: 58px;
-    width: 100% ;
+    width: 100%;
   }
 }
+
 .downloadButton:hover {
   transform: scale(1.05);
 }
